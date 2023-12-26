@@ -1,1 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar-nav {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-item {
+            margin-left: 20px;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url("hero.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            color: white;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .hero-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .about {
+            padding: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 40px;
+        }
+
+        .about-content {
+            max-width: 600px;
+        }
+
+        .about-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .about-text {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .projects {
+            padding: 40px;
+            background-color: #f0f0f0;
+        }
+
+        .projects-title {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+
+        .project-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .project-description {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">My Portfolio</div>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Hi, I'm John Doe</h1>
+                <h2 class="hero-subtitle">A web developer and designer</h2>
+                <a class="hero-button" href="#contact">Contact Me</a>
+            </div>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="container">
+            <img class="about-image" src="profile.jpg" alt="Profile picture">
+            <div class="about-content">
+                <h3 class="about-title">About Me</h3>
+                <p class="about-text">I'm a self-taught web developer and designer with a passion for creating beautiful and functional websites. I have experience in HTML, CSS, JavaScript, Bootstrap, and WordPress. I enjoy learning new technologies and tools to improve my skills and deliver high-quality work. Some of the projects that I have worked on are listed below.</p>
+            </div>
+        </div>
+    </section>
+    <section class="projects" id="projects">
+        <div class="container">
+            <h3 class="projects-title">My Projects</h3>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img class="project-image" src="project1.jpg" alt="Project 1">
+                    <div class="project-overlay">
+                        <div class="project-name">Project 1</div>
+                        <div class="project-description">A responsive landing page for a fictional company</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img class="project-image" src="project2.jpg" alt="Project 2">
+                    <div class="project-overlay">
+                        <div class="project-name">Project 2</div>
+                        <div class="project-description">A simple calculator app using JavaScript</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img class="project-image" src="project3.jpg" alt="Project 3">
+                    <div class="project-overlay">
+                        <div class="project-name">Project 3</div>
+                        <div class="project-description">A blog website using WordPress</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
 
